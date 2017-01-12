@@ -51,17 +51,7 @@ private EmpService empService;
 		return empService.getUser(new Long(empId));
 	}
 	
-//	@RequestMapping(value = URIConstants.GET_ALL_EMP, method = RequestMethod.GET)
-//	public @ResponseBody List<Emp> getAllEmployees() {
-//		logger.info("Start getAllEmployees.");
-//		List<Emp> emps = new ArrayList<Emp>();
-//		Set<Integer> empIdKeys = empData.keySet();
-//		for(Integer i : empIdKeys){
-//			emps.add(empData.get(i));
-//		}
-//		return emps;
-//	}
-	
+
 	@RequestMapping(value = URIConstants.CREATE_EMP, method = RequestMethod.POST)
 	public @ResponseBody Emp createEmployee(@RequestBody Emp emp) {
 		logger.info("Start createEmployee.");
